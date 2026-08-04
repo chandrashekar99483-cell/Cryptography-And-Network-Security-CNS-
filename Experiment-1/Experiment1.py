@@ -1,39 +1,45 @@
-from collections import Counter
+# ============================================================
+# Experiment 1
+# Classical Encryption Techniques
+# Caesar Cipher, Vigenere Cipher,
+# Rail Fence Cipher, Monoalphabetic Cipher
+# ============================================================
+
 import string
 
 ALPHABET = string.ascii_uppercase
+SUBSTITUTION_KEY = "QWERTYUIOPASDFGHJKLZXCVBNM"
+
 
 # ---------------- Caesar Cipher ---------------- #
 
 def caesar_encrypt(text, shift):
-    result = ""
+    cipher = ""
+
     for ch in text.upper():
         if ch.isalpha():
-            result += chr((ord(ch) - 65 + shift) % 26 + 65)
+            cipher += chr((ord(ch) - 65 + shift) % 26 + 65)
         else:
-            result += ch
-    return result
+            cipher += ch
 
-
-def caesar_decrypt(text, shift):
-    return caesar_encrypt(text, -shift)
+    return cipher
 
 
 # ---------------- Vigenere Cipher ---------------- #
 
 def generate_key(text, key):
     key = key.upper()
-    key_list = []
+    result = ""
     j = 0
 
     for ch in text:
         if ch.isalpha():
-            key_list.append(key[j % len(key)])
+            result += key[j % len(key)]
             j += 1
         else:
-            key_list.append(ch)
+            result += ch
 
-    return "".join(key_list)
+    return result
 
 
 def vigenere_encrypt(text, key):
@@ -42,27 +48,13 @@ def vigenere_encrypt(text, key):
 
     cipher = ""
 
-    for t, k in zip(text, key):
-        if t.isalpha():
-            cipher += chr((ord(t) + ord(k) - 130) % 26 + 65)
+    for p, k in zip(text, key):
+        if p.isalpha():
+            cipher += chr((ord(p) + ord(k) - 130) % 26 + 65)
         else:
-            cipher += t
+            cipher += p
 
     return cipher
-
-
-def vigenere_decrypt(cipher, key):
-    key = generate_key(cipher, key)
-
-    text = ""
-
-    for c, k in zip(cipher, key):
-        if c.isalpha():
-            text += chr((ord(c) - ord(k) + 26) % 26 + 65)
-        else:
-            text += c
-
-    return text
 
 
 # ---------------- Rail Fence Cipher ---------------- #
@@ -70,13 +62,13 @@ def vigenere_decrypt(cipher, key):
 def rail_fence_encrypt(text, rails):
     text = text.upper()
 
-    rail = ['' for _ in range(rails)]
+    fence = ['' for _ in range(rails)]
 
     row = 0
     direction = 1
 
     for ch in text:
-        rail[row] += ch
+        fence[row] += ch
 
         if row == 0:
             direction = 1
@@ -85,104 +77,78 @@ def rail_fence_encrypt(text, rails):
 
         row += direction
 
-    return ''.join(rail)
+    return ''.join(fence)
 
 
 # ---------------- Monoalphabetic Cipher ---------------- #
 
-SUBSTITUTION_KEY = "QWERTYUIOPASDFGHJKLZXCVBNM"
-
-encrypt_map = dict(zip(ALPHABET, SUBSTITUTION_KEY))
-decrypt_map = dict(zip(SUBSTITUTION_KEY, ALPHABET))
+encrypt_table = dict(zip(ALPHABET, SUBSTITUTION_KEY))
 
 
 def mono_encrypt(text):
-    text = text.upper()
+    cipher = ""
 
-    return ''.join(
-        encrypt_map.get(ch, ch)
-        for ch in text
-    )
+    for ch in text.upper():
+        if ch.isalpha():
+            cipher += encrypt_table[ch]
+        else:
+            cipher += ch
 
-
-def mono_decrypt(text):
-    return ''.join(
-        decrypt_map.get(ch, ch)
-        for ch in text
-    )
-
-
-# ---------------- Frequency Analysis ---------------- #
-
-def frequency_analysis(text):
-    letters = [c for c in text if c.isalpha()]
-
-    count = Counter(letters)
-
-    total = len(letters)
-
-    print("\nLetter Frequency")
-
-    for letter in sorted(count):
-        print(f"{letter} : {count[letter]} ({count[letter]/total*100:.2f}%)")
+    return cipher
 
 
 # ---------------- Main Program ---------------- #
 
-plaintext = input("Enter Plaintext: ").upper()
+plaintext = input("Enter Plaintext : ").upper()
 
-print("\n=========== Caesar Cipher ===========")
-
+# Caesar
 shift = 3
-
 caesar = caesar_encrypt(plaintext, shift)
 
-print("Ciphertext :", caesar)
-print("Decrypted  :", caesar_decrypt(caesar, shift))
-
-print("\n=========== Vigenere Cipher =========")
-
+# Vigenere
 keyword = "LEMON"
+vigenere = vigenere_encrypt(plaintext, keyword)
 
-vig = vigenere_encrypt(plaintext, keyword)
-
-print("Keyword    :", keyword)
-print("Ciphertext :", vig)
-print("Decrypted  :", vigenere_decrypt(vig, keyword))
-
-print("\n=========== Rail Fence Cipher =======")
-
+# Rail Fence
 rails = 3
-
 rail = rail_fence_encrypt(plaintext, rails)
 
-print("Rails      :", rails)
-print("Ciphertext :", rail)
-
-print("\n=========== Monoalphabetic ==========")
-
+# Monoalphabetic
 mono = mono_encrypt(plaintext)
 
-print("Key        :", SUBSTITUTION_KEY)
+print("\n")
+print("=" * 55)
+print("           SAMPLE OUTPUT / RESULT")
+print("=" * 55)
+
+print("\nPlaintext")
+print(plaintext)
+
+print("\nCaesar Cipher")
+print("Shift Key :", shift)
+print("Ciphertext :", caesar)
+
+print("\nVigenere Cipher")
+print("Keyword :", keyword)
+print("Ciphertext :", vigenere)
+
+print("\nRail Fence Cipher")
+print("Rails :", rails)
+print("Ciphertext :", rail)
+
+print("\nMonoalphabetic Cipher")
+print("Key :")
+print(SUBSTITUTION_KEY)
 print("Ciphertext :", mono)
-print("Decrypted  :", mono_decrypt(mono))
 
-print("\n=========== Frequency Analysis ======")
+print("\nFrequency Analysis")
+print()
 
-print("\nCaesar")
-frequency_analysis(caesar)
+print("{:<20}{}".format("Cipher", "Resistance"))
+print("-" * 35)
+print("{:<20}{}".format("Caesar", "Very Low"))
+print("{:<20}{}".format("Rail Fence", "Low"))
+print("{:<20}{}".format("Monoalphabetic", "Medium"))
+print("{:<20}{}".format("Vigenere", "High"))
 
-print("\nVigenere")
-frequency_analysis(vig)
-
-print("\nRail Fence")
-frequency_analysis(rail)
-
-print("\nMonoalphabetic")
-frequency_analysis(mono)
-
-print("\n========== Comparison ==========")
-print("Caesar          : Very Low Resistance")
-print("Rail Fence      : Low Resistance")
-print("Monoalphabetic  : Medium Resistance")
-print("Vigenere        : High Resistance")
+print("\nExperiment Completed Successfully.")
