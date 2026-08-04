@@ -1,70 +1,32 @@
 Enter Plaintext:  Alliance
 
-=========== Caesar Cipher ===========
-Ciphertext : DOOLDQFH
-Decrypted  : ALLIANCE
+================ SAMPLE OUTPUT / RESULT ================
 
-=========== Vigenere Cipher =========
-Keyword    : LEMON
-Ciphertext : LPXWNYGQ
-Decrypted  : ALLIANCE
+Plaintext
+ALLIANCE
 
-=========== Rail Fence Cipher =======
-Rails      : 3
-Ciphertext : AALINELC
+Caesar Cipher
+Shift Key: 3
+Ciphertext: DOOLDQFH
 
-=========== Monoalphabetic ==========
-Key        : QWERTYUIOPASDFGHJKLZXCVBNM
-Ciphertext : QSSOQFET
-Decrypted  : ALLIANCE
+Vigenère Cipher
+Keyword: LEMON
+Ciphertext: LPXWNYGQ
 
-=========== Frequency Analysis ======
+Rail Fence Cipher
+Rails: 3
+Ciphertext: AALINELC
 
-Caesar
+Monoalphabetic Cipher
+Key:
+QWERTYUIOPASDFGHJKLZXCVBNM
+Ciphertext:
+QSSOQFET
 
-Letter Frequency
-D : 2 (25.00%)
-F : 1 (12.50%)
-H : 1 (12.50%)
-L : 1 (12.50%)
-O : 2 (25.00%)
-Q : 1 (12.50%)
-
-Vigenere
-
-Letter Frequency
-G : 1 (12.50%)
-L : 1 (12.50%)
-N : 1 (12.50%)
-P : 1 (12.50%)
-Q : 1 (12.50%)
-W : 1 (12.50%)
-X : 1 (12.50%)
-Y : 1 (12.50%)
-
-Rail Fence
-
-Letter Frequency
-A : 2 (25.00%)
-C : 1 (12.50%)
-E : 1 (12.50%)
-I : 1 (12.50%)
-L : 2 (25.00%)
-N : 1 (12.50%)
-
-Monoalphabetic
-
-Letter Frequency
-E : 1 (12.50%)
-F : 1 (12.50%)
-O : 1 (12.50%)
-Q : 2 (25.00%)
-S : 2 (25.00%)
-T : 1 (12.50%)
-
-========== Comparison ==========
-Caesar          : Very Low Resistance
-Rail Fence      : Low Resistance
-Monoalphabetic  : Medium Resistance
-Vigenere        : High Resistance
-
+Frequency Analysis
+Cipher              Resistance
+-----------------------------------
+Caesar              Very Low
+Rail Fence          Low
+Monoalphabetic      Medium
+Vigenère            High
