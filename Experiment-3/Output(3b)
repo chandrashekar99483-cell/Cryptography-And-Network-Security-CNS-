@@ -1,1 +1,53 @@
+Enter Plaintext:  CRYPTOGRAPHY LAB
 
+=======================================================
+              AES Encryption Results
+=======================================================
+
+ECB :
+8ae39028c6ba9d6695c7443c8a1e3cae104f96fab2d36dccaf40157b399b5f2e
+
+CBC :
+b7ad3e6007e0a7c54b275a5f0063a137416480faa8827160c4fe7e142c1e3764
+
+CFB :
+8a22c240407a5b9e9e0f4957f8e9492b7ffccc199d2c718fc817339f2bffded8
+
+OFB :
+8a95b363c438313b6bdf6f7f34aa795e0c8bf413b39668b5cba8e2a5333166d5
+
+=======================================================
+              Execution Time
+=======================================================
+
+ECB : 0.0004393 seconds
+CBC : 0.0001378 seconds
+CFB : 0.0001155 seconds
+OFB : 0.0001160 seconds
+
+=======================================================
+              Security Comparison
+=======================================================
+
+ECB : Least Secure
+CBC : High Security
+CFB : High Security (Streaming)
+OFB : High Security (No Error Propagation)
+
+=======================================================
+              Observation
+=======================================================
+
+ECB is the least secure mode because identical plaintext
+blocks produce identical ciphertext blocks.
+
+CBC provides high security because each plaintext block
+depends on the previous ciphertext block.
+
+CFB is suitable for streaming applications.
+
+OFB provides high security and prevents error propagation.
+
+Experiment Completed Successfully.
+
+Click to add a cell.
