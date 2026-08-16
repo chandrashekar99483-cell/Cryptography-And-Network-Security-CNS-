@@ -1,1 +1,54 @@
+Enter Plaintext:  CRYPTOGRAPHYLAB
+
+============================================================
+                 DES ENCRYPTION RESULTS
+============================================================
+
+ECB Ciphertext :
+3e2f75232fdedb9479552d2967124770
+
+CBC Ciphertext :
+9a2ba589a16879f184326359de00d57f
+
+CFB Ciphertext :
+dc21499305c9866e7189108389570cb0
+
+OFB Ciphertext :
+dc482dbc42470485aa18269d24d7ef0e
+
+============================================================
+                 EXECUTION TIME
+============================================================
+
+ECB : 0.000217 seconds
+CBC : 0.000155 seconds
+CFB : 0.000124 seconds
+OFB : 0.000120 seconds
+
+============================================================
+                 SECURITY COMPARISON
+============================================================
+
+ECB : Least Secure
+CBC : Secure
+CFB : Secure for Streaming
+OFB : Secure for Noisy Channels
+
+============================================================
+                 OBSERVATION
+============================================================
+
+ECB is the least secure because identical plaintext blocks
+produce identical ciphertext blocks.
+
+CBC provides better security because each block depends on
+the previous ciphertext block.
+
+CFB is suitable for streaming data and does not require
+padding during normal stream operation.
+
+OFB generates a keystream and is useful for applications
+where error propagation should be minimized.
+
+Experiment Completed Successfully.
 
