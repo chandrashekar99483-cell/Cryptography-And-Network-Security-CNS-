@@ -104,22 +104,3 @@ print("CFB : High Security (Streaming)")
 print("OFB : High Security (No Error Propagation)")
 
 
-# ---------------- Observation ---------------- #
-
-print("\n" + "=" * 55)
-print("              Observation")
-print("=" * 55)
-
-print("""
-ECB is the least secure mode because identical plaintext
-blocks produce identical ciphertext blocks.
-
-CBC provides high security because each plaintext block
-depends on the previous ciphertext block.
-
-CFB is suitable for streaming applications.
-
-OFB provides high security and prevents error propagation.
-""")
-
-print("Experiment Completed Successfully.")
