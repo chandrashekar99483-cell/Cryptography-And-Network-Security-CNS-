@@ -102,24 +102,3 @@ print("\nECB : Least Secure")
 print("CBC : Secure")
 print("CFB : Secure for Streaming")
 print("OFB : Secure for Noisy Channels")
-
-
-print("\n" + "=" * 60)
-print("                 OBSERVATION")
-print("=" * 60)
-
-print("""
-ECB is the least secure because identical plaintext blocks
-produce identical ciphertext blocks.
-
-CBC provides better security because each block depends on
-the previous ciphertext block.
-
-CFB is suitable for streaming data and does not require
-padding during normal stream operation.
-
-OFB generates a keystream and is useful for applications
-where error propagation should be minimized.
-""")
-
-print("Experiment Completed Successfully.")
