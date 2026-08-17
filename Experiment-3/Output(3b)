@@ -33,21 +33,3 @@ ECB : Least Secure
 CBC : High Security
 CFB : High Security (Streaming)
 OFB : High Security (No Error Propagation)
-
-=======================================================
-              Observation
-=======================================================
-
-ECB is the least secure mode because identical plaintext
-blocks produce identical ciphertext blocks.
-
-CBC provides high security because each plaintext block
-depends on the previous ciphertext block.
-
-CFB is suitable for streaming applications.
-
-OFB provides high security and prevents error propagation.
-
-Experiment Completed Successfully.
-
-Click to add a cell.
