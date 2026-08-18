@@ -1,10 +1,6 @@
 # Experiment 2
-# Cryptanalysis using Frequency Analysis and Statistical Methods
-
 from collections import Counter
 import matplotlib.pyplot as plt
-
-# Standard English Letter Frequencies
 english_freq = {
     'E': 12.7,
     'T': 9.1,
@@ -15,11 +11,7 @@ english_freq = {
 }
 
 ciphertext = input("Enter Ciphertext: ")
-
-# Remove spaces and convert to uppercase
 ciphertext = ''.join(ciphertext.split()).upper()
-
-# Count letters
 counter = Counter(ciphertext)
 
 total_letters = sum(counter.values())
@@ -40,7 +32,7 @@ for letter in sorted(counter.keys()):
     letters.append(letter)
     percentages.append(percent)
 
-# Histogram
+
 plt.figure(figsize=(10,5))
 plt.bar(letters, percentages)
 plt.title("Letter Frequency Distribution")
