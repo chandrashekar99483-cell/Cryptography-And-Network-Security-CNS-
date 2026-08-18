@@ -1,8 +1,5 @@
 # Experiment 1
-# Implement and Compare Classical Encryption Techniques
-
 import string
-
 # ---------------- Caesar Cipher ---------------- #
 
 def caesar_encrypt(text, shift):
@@ -13,8 +10,6 @@ def caesar_encrypt(text, shift):
         else:
             result += ch
     return result
-
-
 # ---------------- Vigenere Cipher ---------------- #
 
 def generate_key(text, key):
@@ -43,8 +38,6 @@ def vigenere_encrypt(text, key):
             cipher += p
 
     return cipher
-
-
 # ---------------- Rail Fence Cipher ---------------- #
 
 def rail_fence_encrypt(text, rails):
@@ -64,8 +57,6 @@ def rail_fence_encrypt(text, rails):
         row += direction
 
     return ''.join(fence)
-
-
 # ---------------- Monoalphabetic Cipher ---------------- #
 
 plain = string.ascii_uppercase
@@ -82,8 +73,6 @@ def mono_encrypt(text):
         else:
             cipher += ch
     return cipher
-
-
 # ---------------- Main Program ---------------- #
 
 plaintext = input("Enter Plaintext: ").upper()
