@@ -1,1 +1,24 @@
+=============================================
+     SECURE RANDOM NUMBER GENERATOR
+=============================================
+
+Generated Random Numbers:
+[1 1 0 4 0 9 4 1 3 4 7 1 5 1 0 4 2 1 3 1] ...
+
+Statistical Analysis
+-------------------------
+Mean: 4.494
+Variance: 8.202
+
+Observed Frequency:
+[ 95 102 105  97 115  90  90 104 105  97]
+
+Expected Frequency:
+[100 100 100 100 100 100 100 100 100 100]
+
+Chi-Square Statistic: 5.38
+P-value: 0.8
+
+Result:
+The generated numbers pass the randomness test.
 
