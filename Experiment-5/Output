@@ -1,1 +1,25 @@
+Enter first number: 35
+Enter second number: 15
 
+Euclid's Algorithm
+GCD = 5
+
+Extended Euclid
+GCD = 5
+x = 1
+y = -2
+Modular inverse does not exist.
+
+Enter a prime number: 11
+
+Fermat's Theorem
+a^(p-1) mod p = 1
+
+Enter n for Euler's Theorem: 10
+
+a and n must be coprime for Euler's Theorem.
+
+Chinese Remainder Theorem
+Moduli = [3, 5, 7]
+Remainders = [2, 3, 2]
+Solution = 23
