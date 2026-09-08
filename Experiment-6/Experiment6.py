@@ -133,14 +133,3 @@ else:
 
 print("Time :", format(miller_time, ".8f"), "seconds")
 
-
-# ---------------- Comparison ---------------- #
-
-print("\nComparison")
-print("-" * 40)
-
-print("Trial Division : Deterministic and exact")
-print("Fermat Test : Probabilistic")
-print("Miller-Rabin Test : Probabilistic and highly accurate")
-
-print("\nExperiment Completed Successfully.")
