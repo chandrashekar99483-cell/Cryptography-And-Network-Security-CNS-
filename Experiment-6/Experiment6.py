@@ -108,7 +108,6 @@ miller_time = time.perf_counter() - start
 # ---------------- Display Results ---------------- #
 
 print("\nPrimality Test Results")
-print("-" * 40)
 
 if trial_result:
     print("Trial Division : Prime")
