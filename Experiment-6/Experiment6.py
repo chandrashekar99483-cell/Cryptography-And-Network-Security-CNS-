@@ -85,10 +85,3 @@ else:
 print("Time :", format(fermat_time, ".8f"), "seconds")
 
 
-if miller_result:
-    print("Miller-Rabin Test : Probably Prime")
-else:
-    print("Miller-Rabin Test : Composite")
-
-print("Time :", format(miller_time, ".8f"), "seconds")
-
