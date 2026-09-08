@@ -58,11 +58,6 @@ fermat_result = fermat_test(n)
 fermat_time = time.perf_counter() - start
 
 
-# Miller-Rabin Test
-start = time.perf_counter()
-miller_result = miller_rabin(n)
-miller_time = time.perf_counter() - start
-
 
 # ---------------- Display Results ---------------- #
 
