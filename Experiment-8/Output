@@ -1,1 +1,36 @@
+Enter a prime number (p):  23
+Enter a primitive root (g):  5
+
+Enter User A private key:  6
+Enter User B private key:  15
+
+==================================================
+        DIFFIE-HELLMAN KEY EXCHANGE
+==================================================
+
+Public Parameters
+-----------------
+Prime number (p): 23
+Primitive root (g): 5
+
+Private Keys
+------------
+User A Private Key: 6
+User B Private Key: 15
+
+Public Keys
+-----------
+User A Public Key: 8
+User B Public Key: 19
+
+Shared Session Keys
+-------------------
+User A Shared Key: 2
+User B Shared Key: 2
+
+Key Verification
+----------------
+Both shared keys are equal.
+Secure Session Key Established
+Shared Session Key: 2
 
