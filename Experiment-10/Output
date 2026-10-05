@@ -1,1 +1,39 @@
+Enter the original message:  i love bikes
+Enter the slightly modified message:  i love birds
+
+==================================================
+     CRYPTOGRAPHIC HASH ALGORITHM COMPARISON
+==================================================
+
+--------------------------------------------------
+MD5
+--------------------------------------------------
+Original Hash : 04c80d9ef4a3975ee0d033b5a7fd5fd5
+Modified Hash : 521f0bade12a8881776a718a90535b1c
+Avalanche Effect : 52.34 %
+Execution Time : 0.00015212 seconds
+
+--------------------------------------------------
+SHA-1
+--------------------------------------------------
+Original Hash : d66d4c1b21d9c0a1e38aa79ad76d24f445366336
+Modified Hash : 828150b3730a56c7a78a1fc74a224041572a7d9c
+Avalanche Effect : 45.00 %
+Execution Time : 0.00009971 seconds
+
+--------------------------------------------------
+SHA-256
+--------------------------------------------------
+Original Hash : 5c6bfd170f0ba594c1ec99d7dcb452d15b9fa8011e22d51da2d9a04e51579c2e
+Modified Hash : b384f4eb92d6100da3fc955418c25db4cd2b56f3ed564c182c6640495d8890b5
+Avalanche Effect : 53.12 %
+Execution Time : 0.00009358 seconds
+
+--------------------------------------------------
+SHA-512
+--------------------------------------------------
+Original Hash : 3e65e3ba8ef78a1bee35b0726db69c20339baacd734814ed30e20dd5bbea7d3b51a2a9a0ddbd8c1d1c8a99bb95418778ab3f624b54cc8e203c70fcbbb885c87e
+Modified Hash : 2e187ceea63151f15085ae296e3c29d05606211e6f0d12b7f95abafe45b46a13c653a8856c384faefb8388c7e8deeeb4aa96f78c655dff5376a45980d46ff931
+Avalanche Effect : 50.39 %
+Execution Time : 0.00012663 seconds
 
