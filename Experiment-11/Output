@@ -1,1 +1,16 @@
+Enter the Original Message:  i love Bikes
+
+Generated HMAC:
+7b8ebaa9f0893066e375ddf12e1df581fa7c9012898983bacf585760096f89b6
+
+Enter the Received Message:  i love cars
+
+Received HMAC:
+b71226a6553f63a2b1b77d9615af97a9768ac89eb61b394ad20c509c4db7ae68
+
+=============================================
+          VERIFICATION RESULT
+=============================================
+Message Tampering Detected.
+Integrity Verification Failed.
 
